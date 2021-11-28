@@ -1,6 +1,6 @@
 import { SET_XKCD, SET_NUM, ERROR, REMOVE_ERROR, SET_LOADING } from "./types";
 
-export default (state, action) => {
+const xkcdReducer = (state, action) => {
   switch (action.type) {
     case SET_XKCD:
       return {
@@ -35,3 +35,5 @@ export default (state, action) => {
       return state;
   }
 };
+
+export default xkcdReducer;
