@@ -5,10 +5,25 @@ import Spinner from "../layout/Spinner";
 
 const ComicItem = () => {
   const xkcdContext = useContext(XkcdContext);
-  const { comic, loading } = xkcdContext;
-
+  const { comic, loading, error } = xkcdContext;
   if (loading) {
-    return <Spinner />;
+    return (
+      <Spinner>
+        <div className="all-center">
+          <h3>
+            {" "}
+            PLEASE VISIT{" "}
+            <a
+              href="https://cors-anywhere.herokuapp.com/corsdemo"
+              target="_blank"
+            >
+              cors-anywhere
+            </a>{" "}
+            TO GAIN NEEDED PERMISSIONS
+          </h3>
+        </div>{" "}
+      </Spinner>
+    );
   } else {
     return (
       <div className="all-center">

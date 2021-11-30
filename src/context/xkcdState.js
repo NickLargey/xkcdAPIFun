@@ -20,6 +20,7 @@ const XkcdState = (props) => {
     const res = await axios.get(
       "https://cors-anywhere.herokuapp.com/http://xkcd.com/info.0.json"
     );
+
     dispatch({
       type: SET_NUM,
       payload: res.data.num,
