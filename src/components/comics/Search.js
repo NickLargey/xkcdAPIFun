@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 
 import XkcdContext from "../../context/xkcdContext";
-import Spinner from "../layout/Spinner";
+// import Spinner from "../layout/Spinner";
 
 const Search = () => {
   const xkcdContext = useContext(XkcdContext);
@@ -23,7 +23,7 @@ const Search = () => {
   };
 
   if (xkcdContext.loading) {
-    return <Spinner />;
+    return "-";
   } else {
     return (
       <div>
